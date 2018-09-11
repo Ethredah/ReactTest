@@ -9,7 +9,7 @@ import './css/bootstrap.css';
 import Avatar from './Avatar';
 
 // IMPORTING ALL USERS
-import Login from './Login';
+import Users from './Users';
 
 // import Particles from 'react-particles-js';
 
@@ -49,7 +49,7 @@ showAll = () => {
 
     if (this.state.showall) {
       return(
-          <Login />
+          <Users />
         );
     }
     else {
