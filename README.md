@@ -1,6 +1,6 @@
 ## REACT APPLICATION
 
-# Using API Endpoints, this application demonstrates fetches data using axios and managing components with state.
+# Using API Endpoints, this application fetches data using axios and managing components with state.
 
 *The app uses sample user data from https://reqres.in for demonstration*
 
