@@ -19,18 +19,21 @@ Look at the Live Demo <a href="https://react-test-data.herokuapp.com/" target="_
 
 ### Quick Set-Up
 - Make Sure Node Js and npm are installed in your computer
-`sudo apt install nodejs`
-<br/>
-`sudo apt install npm`
+``sudo apt install nodejs``
 
--Clone or download the application
+&&
 
--Change Path to the application directory and start development server
+``sudo apt install npm``
+
+*Clone or download the application
+
+*Change Path to the application directory and start development server
 `npm start`
 
--Use the test login credentials to manage users
+*Use the test login credentials to manage users
 <b>email: <i>admin@test.com</i></b>
+<br>
 <b>pass: <i>iamroot</i></b>
 
 
-
+:neckbeard:
