@@ -25,12 +25,12 @@ Look at the Live Demo <a href="https://react-test-data.herokuapp.com/" target="_
 
 ``sudo apt install npm``
 
-*Clone or download the application
+* Clone or download the application
 
-*Change Path to the application directory and start development server
+* Change Path to the application directory and start development server
 `npm start`
 
-*Use the test login credentials to manage users
+* Use the test login credentials to manage users
 <b>email: <i>admin@test.com</i></b>
 <br>
 <b>pass: <i>iamroot</i></b>
