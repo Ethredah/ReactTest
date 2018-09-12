@@ -54,12 +54,13 @@ showAll = () => {
           <h1>Meet A Developer!</h1>
           <div className="alert alert-warning" role="alert">
             {/*<h4 className="alert-heading">Hello There!</h4>*/}
-            <p> Don’t treat a semi colon as an end of line but rather as a possibility of a new beginning.Inspirational right? LOL</p>
+            <p>Don’t treat a Semi Colon as an end of line but rather as a possibility of a new beginning.Inspirational right? LOL;</p>
           </div>
             <button type="button" onClick={this.showAll} className="btn btn-info">Manage Users</button>
           <br/>
 
             <Avatar />
+
 
           </div>
 
