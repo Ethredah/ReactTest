@@ -31,9 +31,8 @@ Look at the Live Demo <a href="https://react-test-data.herokuapp.com/" target="_
 `npm start`
 
 * Use the test login credentials to manage users
-<b>email: <i>admin@test.com</i></b>
-<br>
-<b>pass: <i>iamroot</i></b>
+>> <b>email: <i>admin@test.com</i></b>
+>> <b>pass: <i>iamroot</i></b>
 
 
 :neckbeard:
