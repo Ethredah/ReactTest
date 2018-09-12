@@ -9,14 +9,14 @@ import Modal from './UserModal';
 
 import App from './App';
 
-import Users2 from './Users2';
+import Users from './Users';
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
 
-class Users extends Component {
+class Users2 extends Component {
 
 constructor(props)
 {
@@ -33,15 +33,10 @@ constructor(props)
       users2: {
         data: []
       },
-      users3: {
-        data: []
-      },
-      users4: {
-        data: []
-      },
+
       loading: true,
 
-    pagetwo:false,
+    pageone:false,
 
 
     id: ''  ,
@@ -60,10 +55,10 @@ constructor(props)
  componentDidMount()
   {
 
-  	setTimeout(() => this.setState({ loading: false }), 500);
+  	setTimeout(() => this.setState({ loading: false }), 500); 
 
     // Make Http Request with Axios
-    axios.get('https://reqres.in/api/users/?page=1')
+    axios.get('https://reqres.in/api/users/?page=3')
     .then((res) => {
       // Set State with results
       const users = res.data;
@@ -77,7 +72,7 @@ constructor(props)
       });
 
 
-      axios.get('https://reqres.in/api/users/?page=2')
+      axios.get('https://reqres.in/api/users/?page=4')
     .then((res) => {
       // Set State with results
       const users2 = res.data;
@@ -110,9 +105,9 @@ showModal = () => {
 
 
 
-nextPage = () => {
+prevPage = () => {
 	 	this.setState({
-	 		pagetwo:true
+	 		pageone:true
 	 	});
 	 	// console.log(this.state.pagetwo);
 	 }
@@ -211,10 +206,10 @@ render ()
 
     else
 
-if (this.state.pagetwo) {
+if (this.state.pageone) {
 
 	return (
-		<Users2 />
+		<Users />
 		);
 }  
 
@@ -261,7 +256,7 @@ if (this.state.pagetwo) {
 
 		);
 
-    const { loading } = this.state;
+ const { loading } = this.state;
     
     if(loading) {
       return <img src="./load.gif" alt="loader"/> 
@@ -341,8 +336,8 @@ if (this.state.pagetwo) {
 
 		<nav aria-label="Page navigation example" style={{backgroundColo: 'black'}}>
 		  <ul className="pagination">
-		    <li className="page-item"><a className="page-link" > Prev</a></li>
-		    <li className="page-item"><a className="page-link" onClick={this.nextPage} >Next</a></li>
+		    <li className="page-item"><a className="page-link" onClick={this.prevPage} > Prev</a></li>
+		    <li className="page-item"><a className="page-link"  >Next</a></li>
 		  </ul>
 		</nav>
 
@@ -361,4 +356,4 @@ if (this.state.pagetwo) {
 }
 
 
-export default Users;
+export default Users2;

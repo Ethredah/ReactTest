@@ -8,18 +8,8 @@ import './css/bootstrap.css';
 
 import Avatar from './Avatar';
 
-// IMPORTING ALL USERS
+// IMPORTING LOGIN COMPONENT
 import Login from './Login';
-
-// import Particles from 'react-particles-js';
-
-// FONTAWESOME
-import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faStroopwafel)
-
 
 
 
@@ -30,7 +20,7 @@ class Home extends Component {
     super(props)
     this.state = {
 
-      showall: false,
+      showall: false
 
     }
   }
@@ -59,7 +49,7 @@ showAll = () => {
 
        
 
-        <div className="w3ls-pos">
+        <div className="w3ls-pos" style={{width: 700}}>
 
           <h1>USER MANAGEMENT</h1>
           <hr/>
