@@ -51,8 +51,11 @@ showAll = () => {
 
         <div className="w3ls-pos" style={{width: 700}}>
 
-          <h1>USER MANAGEMENT</h1>
-          <hr/>
+          <h1>Meet A Developer!</h1>
+          <div className="alert alert-warning" role="alert">
+            {/*<h4 className="alert-heading">Hello There!</h4>*/}
+            <p> Don’t treat a semi colon as an end of line but rather as a possibility of a new beginning.Inspirational right? LOL</p>
+          </div>
             <button type="button" onClick={this.showAll} className="btn btn-info">Manage Users</button>
           <br/>
 
@@ -60,12 +63,7 @@ showAll = () => {
 
           </div>
 
-          {/*<div className="copy-wthree">
-            <p>© 2018 All Rights Reserved | Developed by
-              <a href="http://ethredah.github.io" target="_blank">Ethredah Chao</a>
-            </p>
-          </div>
-*/}
+
 
       </div>
       
