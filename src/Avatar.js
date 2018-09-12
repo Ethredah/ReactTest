@@ -73,7 +73,7 @@ class Avatar extends Component
 componentDidMount()
   {
 
-       setTimeout(() => this.setState({ loading: false }), 1400);
+       setTimeout(() => this.setState({ loading: false }), 1500);
 
        // Make Http Request with Axios
     axios.get('https://reqres.in/api/users/?page=1')
