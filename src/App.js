@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import './css/style.css';
 import './css/bootstrap.css';
 
 import Avatar from './Avatar';
+
+// import TestLink from './Link';
 
 // IMPORTING LOGIN COMPONENT
 import Login from './Login';
@@ -45,9 +47,26 @@ showAll = () => {
     else {
 
     return (
-      <div className="App">
 
-       
+     
+      <div className="App">
+{/*
+      <Router>
+
+      <div>
+      
+      <Link to={'/link'}> Link</Link>
+
+       <Switch>
+      <Route exact path='/link' component={TestLink} />
+      </Switch>
+
+      </div>
+
+      </Router>
+*/}
+     
+  
 
         <div className="w3ls-pos" style={{width: 700}}>
 

@@ -11,6 +11,8 @@ import App from './App';
 
 import Users2 from './Users2';
 
+import Success from './Success';
+
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -131,7 +133,7 @@ backHome = () => {
     this.setState({
       showhome:true
     });
-     console.log(this.state.showhome);
+     // console.log(this.state.showhome);
 
   }
 
@@ -265,6 +267,13 @@ if (this.state.pagetwo) {
     
     if(loading) {
       return <img src="./load.gif" alt="loader"/> 
+    }
+
+    // SHOW SUCCESS
+
+    if (this.state.showsuccess) {
+
+    	return <Success />
     }
 
 	return (
