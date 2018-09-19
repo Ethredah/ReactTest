@@ -166,9 +166,8 @@ backHome = () => {
      this.setState({
 	 		showmodal:false
 	 	});
-     this.setState({
-	 		showsuccess:true
-	 	});
+     	 	alert(this.state.first_name + "  " +this.state.last_name+ " has been successfully added!");
+
 
 
  	}

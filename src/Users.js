@@ -11,7 +11,6 @@ import App from './App';
 
 import Users2 from './Users2';
 
-import Success from './Success';
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -28,7 +27,6 @@ constructor(props)
 	showmodal: false,
 	showsuccess:false,
 
-	
       users: {
         data: []
       },
@@ -45,11 +43,14 @@ constructor(props)
 
     pagetwo:false,
 
+    people: {
+	    id: ''  ,
+	    first_name: '',
+	    last_name: '',
+	    avatar: ''
+    },
 
-    id: ''  ,
-    first_name: '',
-    last_name: '',
-    avatar: '',
+   
     activePage:1
 
 	};
@@ -71,7 +72,7 @@ constructor(props)
       const users = res.data;
 
           this.setState({ users });
-          console.log(this.state);
+          // console.log(this.state);
 
     })
       .catch(function (error) {
@@ -85,7 +86,7 @@ constructor(props)
       const users2 = res.data;
 
           this.setState({ users2 });
-          console.log(this.state);
+          // console.log(this.state);
 
     })
       .catch(function (error) {
@@ -173,16 +174,16 @@ backHome = () => {
      this.setState({
 	 		showmodal:false
 	 	});
-     this.setState({
-	 		showsuccess:true
-	 	});
+  
+
+	 	alert(this.state.first_name + "  " +this.state.last_name+ " has been successfully added!");
 
 
  	}
 
 
  handleDelete = event => {
- 	event.preventDefault();
+ 	// event.preventDefault();
 
   this.setState({
   	id: event.target.value
@@ -190,9 +191,16 @@ backHome = () => {
 
     axios.delete(`https://reqres.in/api/users/${this.state.id}`)
       .then(res => {
+
+      	// SHOW DELETE STATUS RESPONSE 204
         console.log(res);
         console.log(res.data);
+        
       })
+       .catch(function (error) {
+        console.log(error);
+      });
+    
 
  }
 
@@ -232,7 +240,7 @@ if (this.state.pagetwo) {
 		      <td>{user.last_name}</td>
 		      <td>
 
-		      <img src="./bin.ico" style={{maxHeight:20, maxWidth:20}} name="id" onChange={this.handleDelete}
+		      <img src="./bin.ico" style={{maxHeight:20, maxWidth:20}} name="id" value={user.id} onClick={this.handleDelete}
 		      title="Delete" alt="Del" />
 
 		      <img src="./pen.png" style={{maxHeight:20, maxWidth:20, float:'right'}} 
@@ -252,7 +260,7 @@ if (this.state.pagetwo) {
 		      <td>{user.last_name}</td>
 		      <td>
 
-		      <img src="./bin.ico" style={{maxHeight:20, maxWidth:20}} name="id" onChange={this.handleDelete}
+		      <img src="./bin.ico" style={{maxHeight:20, maxWidth:20}} name="id" value={user.id} onClick={this.handleDelete}
 		      title="Delete" alt="Del" />
 
 		      <img src="./pen.png" style={{maxHeight:20, maxWidth:20, float:'right'}} 
@@ -263,18 +271,17 @@ if (this.state.pagetwo) {
 
 		);
 
-    const { loading } = this.state;
+    const { loading } = this.state.loading;
     
     if(loading) {
       return <img src="./load.gif" alt="loader"/> 
     }
 
-    // SHOW SUCCESS
+    // 	ADDED USERS
 
-    if (this.state.showsuccess) {
 
-    	return <Success />
-    }
+
+   
 
 	return (
         <div className="w3ls-pos" style={{width: 600}}>
@@ -341,7 +348,6 @@ if (this.state.pagetwo) {
 		    </tr>
 		  </thead>
 		  <tbody>
-
        		 {pageone}
        		 {pagetwo}
 

@@ -11,14 +11,9 @@ import Avatar from './Avatar';
 // IMPORTING ALL USERS
 import Users from './Users';
 
+
 // import Particles from 'react-particles-js';
 
-// FONTAWESOME
-import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faStroopwafel)
 
 
 
@@ -70,13 +65,7 @@ showAll = () => {
 
           </div>
 
-          {/*<div className="copy-wthree">
-            <p>© 2018 All Rights Reserved | Developed by
-              <a href="http://ethredah.github.io" target="_blank">Ethredah Chao</a>
-            </p>
-          </div>
-*/}
-
+         
       </div>
       
     );}

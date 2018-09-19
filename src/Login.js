@@ -50,11 +50,11 @@ handleSubmit = event => {
     });
 
       console.log("Logged In");
-      console.log(this.state);
+      // console.log(this.state);
     }
     else{
 
-    console.log("Wrong Credentials");
+    alert("Wrong Credentials");
   }
     
 

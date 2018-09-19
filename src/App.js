@@ -8,7 +8,6 @@ import './css/bootstrap.css';
 
 import Avatar from './Avatar';
 
-// import TestLink from './Link';
 
 // IMPORTING LOGIN COMPONENT
 import Login from './Login';
@@ -32,7 +31,7 @@ showAll = () => {
     this.setState({
       showall:true
     });
-     console.log(this.state.showall);
+     // console.log(this.state.showall);
 
   };
 
@@ -50,29 +49,13 @@ showAll = () => {
 
      
       <div className="App">
-{/*
-      <Router>
 
-      <div>
-      
-      <Link to={'/link'}> Link</Link>
-
-       <Switch>
-      <Route exact path='/link' component={TestLink} />
-      </Switch>
-
-      </div>
-
-      </Router>
-*/}
-     
   
 
         <div className="w3ls-pos" style={{width: 700}}>
 
           <h1>Meet A Developer!</h1>
           <div className="alert alert-warning" role="alert">
-            {/*<h4 className="alert-heading">Hello There!</h4>*/}
             <p>Don’t treat a Semi Colon as an end of line but rather as a possibility of a new beginning.Inspirational right? LOL;</p>
           </div>
             <button type="button" onClick={this.showAll} className="btn btn-info">Manage Users</button>
