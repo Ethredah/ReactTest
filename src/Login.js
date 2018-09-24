@@ -4,6 +4,7 @@ import App from './App';
 
 import Users from './Users';
 
+import GoogleLogin from 'react-google-login';
 
 class Login extends Component {
 
@@ -39,6 +40,8 @@ backHome = () => {
 
 handleSubmit = event => {
     event.preventDefault();
+
+
 
     
     
@@ -80,7 +83,12 @@ render()
       return <Users />
     }
 
-	
+
+const responseGoogle = (response) => {
+  console.log(response);
+}
+
+
 
 	return (
         <div className="w3ls-pos">
@@ -91,7 +99,7 @@ render()
               <div className="w3ls-login">
                 <label htmlFor="exampleInputEmail1">Email address</label>
                 <input type="email" onChange={this.handleEmailChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Enter email" />
-                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small id="emailHelp" className="form-text text-muted"> (someone@example.com) </small>
               </div>
               <div className="w3ls-login">
                 <label htmlFor="exampleInputPassword1">Password</label>
@@ -100,8 +108,18 @@ render()
               <br />
               <button type="submit" className="btn btn-primary">Login</button>
             </form>
+            <i>or..</i>
+             <br/>
+            
+              <GoogleLogin
+              clientId="499848895015-vka5qu9nr75e1uqebpru98aodqc3a7vm.apps.googleusercontent.com"
+              buttonText="Login with Google"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+            />
 
 		<br />
+
 		<button type="button" onClick={this.backHome} className="btn btn-warning" style={{float:'right'}}>Back Home</button>
 
           </div>
