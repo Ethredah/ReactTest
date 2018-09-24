@@ -100,7 +100,7 @@ const responseGoogle = (response) => {
 
 
 const onFailure = (error) => {
-      alert(error);
+      alert("Oops..Looks like there's something wrong with Google Authentication at the moment!");
     };
 
 
