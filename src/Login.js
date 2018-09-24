@@ -18,7 +18,9 @@ constructor(props)
     email:'',
     password:'',
 
-    isAuthenticated: false
+    isAuthenticated: false,
+    user: null, 
+    token: ''
 
 	};
 
@@ -67,6 +69,27 @@ handleSubmit = event => {
   }
 
 
+ googleResponse = (response) => {
+        const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
+        const options = {
+            method: 'POST',
+            body: tokenBlob,
+            mode: 'cors',
+            cache: 'default'
+        };
+        fetch('http://localhost:3000/api/v1/auth/google', options).then(r => {
+            const token = r.headers.get('x-auth-token');
+            r.json().then(user => {
+                if (token) {
+                    this.setState({isAuthenticated: true, user, token})
+                }
+            });
+        })
+    }
+
+
+
+
 
 
 render()
@@ -101,6 +124,11 @@ const responseGoogle = (response) => {
 }
 
 
+
+
+
+
+
 const onFailure = (error) => {
       alert("Oops..Looks like there's something wrong with Google Authentication at the moment!");
     };
@@ -124,10 +152,9 @@ const onFailure = (error) => {
                 <input type="password" onChange={this.handlePasswordChange} className="form-control" id="exampleInputPassword1" required placeholder="Password" />
               </div>
               <br />
-              <button type="submit" className="btn btn-primary">Login</button>
+              <button type="submit" className="btn btn-primary">Login <i className="fa fa-sign-in" aria-hidden="true"></i></button>
             </form>
-            <i>or..</i>
-             <br/>
+            <hr/>
             
               <GoogleLogin
               clientId="499848895015-vka5qu9nr75e1uqebpru98aodqc3a7vm.apps.googleusercontent.com"
