@@ -33,7 +33,8 @@ Look at the Live Demo <a href="https://react-test-data.herokuapp.com/" target="_
 * Use the test login credentials to manage users
 >> <b>email: <i>admin@test.com</i></b>
 >> <b>pass: <i>iamroot</i></b>
-** Or login with your Google Account Instead.
+<br />
+* <p>Or login with your Google Account Instead.</p>
 
 
 :neckbeard:
