@@ -101,9 +101,9 @@ const responseGoogle = (response) => {
 }
 
 
-// const onFailure = (error) => {
-//       alert("Oops..Looks like there's something wrong with Google Authentication at the moment!");
-//     };
+const onFailure = (error) => {
+      alert("Oops..Looks like there's something wrong with Google Authentication at the moment!");
+    };
 
 
 
@@ -133,7 +133,7 @@ const responseGoogle = (response) => {
               clientId="499848895015-vka5qu9nr75e1uqebpru98aodqc3a7vm.apps.googleusercontent.com"
               buttonText="Login with Google"
               onSuccess={responseGoogle}
-              onFailure={responseGoogle}
+              onFailure={onFailure}
             />
 
 		<br />
