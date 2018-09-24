@@ -89,18 +89,20 @@ render()
 
 
 const responseGoogle = (response) => {
+
   this.setState({
       showadmin:true,
       loggedin:true,
       isAuthenticated:true
     });
 
+  
   console.log(response);
 }
 
 
 const onFailure = (error) => {
-      alert(error);
+      alert("Oops..Looks like there's something wrong with Google Authentication at the moment!");
     };
 
 
