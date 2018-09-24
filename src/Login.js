@@ -16,7 +16,10 @@ constructor(props)
     showadmin:false,
     loggedin:false,
     email:'',
-    password:''
+    password:'',
+
+    isAuthenticated: false
+
 	};
 
 }
@@ -65,6 +68,7 @@ handleSubmit = event => {
 
 
 
+
 render()
 {
 
@@ -85,8 +89,20 @@ render()
 
 
 const responseGoogle = (response) => {
+  this.setState({
+      showadmin:true,
+      loggedin:true,
+      isAuthenticated:true
+    });
+
   console.log(response);
 }
+
+
+const onFailure = (error) => {
+      alert(error);
+    };
+
 
 
 
@@ -115,7 +131,7 @@ const responseGoogle = (response) => {
               clientId="499848895015-vka5qu9nr75e1uqebpru98aodqc3a7vm.apps.googleusercontent.com"
               buttonText="Login with Google"
               onSuccess={responseGoogle}
-              onFailure={responseGoogle}
+              onFailure={onFailure}
             />
 
 		<br />
