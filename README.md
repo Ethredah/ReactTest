@@ -1,6 +1,6 @@
 # REACT APPLICATION
 
-## Using API Endpoints, this application demonstrates fetching data using axios and managing components with state.
+## Using API Endpoints, this application demonstrates fetching data using axios, managing components with state and authentication.
 
 *The app uses sample user data from https://reqres.in for demonstration*
 
@@ -33,6 +33,8 @@ Look at the Live Demo <a href="https://react-test-data.herokuapp.com/" target="_
 * Use the test login credentials to manage users
 >> <b>email: <i>admin@test.com</i></b>
 >> <b>pass: <i>iamroot</i></b>
+<br />
+* <p>Or login with your Google Account Instead.</p>
 
 
 :neckbeard:

@@ -70,21 +70,21 @@ handleSubmit = event => {
 
 
  googleResponse = (response) => {
-        const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
-        const options = {
-            method: 'POST',
-            body: tokenBlob,
-            mode: 'cors',
-            cache: 'default'
-        };
-        fetch('http://localhost:3000/api/v1/auth/google', options).then(r => {
-            const token = r.headers.get('x-auth-token');
-            r.json().then(user => {
-                if (token) {
-                    this.setState({isAuthenticated: true, user, token})
-                }
-            });
-        })
+        // const tokenBlob = new Blob([JSON.stringify({access_token: response.accessToken}, null, 2)], {type : 'application/json'});
+        // const options = {
+        //     method: 'POST',
+        //     body: tokenBlob,
+        //     mode: 'cors',
+        //     cache: 'default'
+        // };
+        // fetch('http://localhost:3000/api/v1/auth/google', options).then(r => {
+        //     const token = r.headers.get('x-auth-token');
+        //     r.json().then(user => {
+        //         if (token) {
+        //             this.setState({isAuthenticated: true, user, token})
+        //         }
+        //     });
+        // })
     }
 
 
@@ -107,11 +107,18 @@ render()
 
 
     if (this.state.loggedin) {
-      return <Users />
+      return <Users name={this.state.user.profileObj.name} email={this.state.user.profileObj.email} image={this.state.user.profileObj.imageUrl} />
     }
 
 
 const responseGoogle = (response) => {
+     
+      const user = response;
+
+          this.setState({ user });
+          console.log(this.state);
+          console.log(this.state.user.profileObj.name)
+
 
   this.setState({
       showadmin:true,

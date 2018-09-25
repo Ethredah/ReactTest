@@ -280,15 +280,26 @@ if (this.state.pagetwo) {
     // 	ADDED USERS
 
 
+ const imgStyle = {
+ 	width: 37,
+ 	height: 37
 
+ }
    
 
 	return (
         <div className="w3ls-pos" style={{width: 600}}>
 
-          <h1>MANAGE USERS</h1>
-          <hr/>
+       <div style={{float:'right'}}>
+       <b style={{color: '#7F2D4B'}}> <img src={this.props.image} alt="profile" style={imgStyle} className="rounded-circle" />  {this.props.name}</b> 
+        <x> :: </x>
+        <i>{this.props.email}</i>
+       </div>
 
+        <br/>
+        <hr/>
+
+          <h3>MANAGE USERS</h3>
         
             <button type="button" onClick={this.showModal} className="btn btn-info" style={{float:'right'}}>Add User</button>
 
