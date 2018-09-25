@@ -287,11 +287,12 @@ if (this.state.pagetwo) {
  }
    
 
+
 	return (
         <div className="w3ls-pos" style={{width: 600}}>
 
        <div style={{float:'right'}}>
-       <b style={{color: '#7F2D4B'}}> <img src={this.props.image} alt="profile" style={imgStyle} className="rounded-circle" />  {this.props.name}</b> 
+       <b style={{color: '#7F2D4B'}}> <img src={this.props.image} alt="img" style={imgStyle} className="rounded-circle" />  {this.props.name}</b> 
         <x> :: </x>
         <i>{this.props.email}</i>
        </div>

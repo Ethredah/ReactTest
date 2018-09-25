@@ -106,10 +106,13 @@ render()
   else
 
 
-    if (this.state.loggedin) {
+    if (this.state.isAuthenticated) {
       return <Users name={this.state.user.profileObj.name} email={this.state.user.profileObj.email} image={this.state.user.profileObj.imageUrl} />
     }
 
+    if (this.state.loggedin) {
+      return <Users email={this.state.email} image='./user.png' />
+    }
 
 const responseGoogle = (response) => {
      
